@@ -1,5 +1,30 @@
 body {
+    margin:0;
+    height:120%;
     min-height: 110vh;
-    background-color: #00013F;
-    background-image: linear-gradient(135deg, #00013F 0%, #C18E92 100%);
+    background-color: #1B2030;
+    font-family: Century Gothic;
+    --background-image: linear-gradient(135deg, #260b01 0%, #8c4a3b 100%);
+}
+a{
+  text-decoration:none
+}
+.bkg-image{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+footer{
+    background: #1a181f;
 }

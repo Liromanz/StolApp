@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import *
 
 def index(request):
-    return render(request, 'index.html')
+    tables = TableFurniture.objects.all()
+    return render(request, 'index.html', {"items": range(7)})

@@ -5,21 +5,42 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/mainpage.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/main.css' %}">
+    {% block additional_css%}
+    {% endblock %}
+
     <title>Главная страница</title>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/JavaScript" src="{% static 'mainsite/js/header.js' %}"></script>
 </head>
 <body>
 {% include '__blocks/header.html' %}
 
-<div class="container">
-  <div class="pt-5">
-  <div class="py-5 mt-5 text-white">
-    {% block main_info %}
-    {% endblock %}
-  </div>
-  </div>
+<div class="main-img">
+    <div class="info">
+        <h4><a href="#category">NEOLOFT</a></h4>
+        <h1>Столы с удобством, которого вы еще не видели</h1>
+        <div class="meta">
+            <a href="https://twitter.com/nodws" target="_b" class="author"></a><br>
+            Произведено <a href="https://twitter.com/nodws" target="_b">Скорогудаевой Софией</a> 16 апреля 2024 года
+        </div>
+    </div>
 </div>
+
+<div class="container">
+    <div class="text-white">
+        {% block main_info %}
+        {% endblock %}
+    </div>
+</div>
+
+{% include '__blocks/footer.html' %}
+
+{% block additional_js%}
+{% endblock %}
 
 </body>
 </html>

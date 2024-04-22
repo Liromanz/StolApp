@@ -1,5 +1,82 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block additional_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/info_card.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'mainsite/css/product_card.css' %}">
+{% endblock %}
+
+{% block additional_js %}
+<script src="{% static '/mainsite/js/header.js' %}"></script>
+{% endblock %}
 
 {% block main_info %}
-    <h1>Всем привет это первая страничка</h1> 
+<div class="movie_card">
+    <div class="info_section" id="tomb">
+        <div class="movie_header">
+            <h1>Удобный кабель-менеджмент</h1>
+        </div>
+        <div class="movie_desc">
+            <p class="text">
+                Столы с желобами для кабель-менеджмента обеспечивают удобство в рабочем пространстве, продлевая срок
+                службы кабелей и способствуя упорядоченности и чистоте. Желоба позволяют легко соединять провода,
+                уменьшая их длину, и обеспечивают удобный способ прокладки кабелей на задней стенке стола или стене,
+                уменьшая излишнее натяжение и перегибы.
+            </p>
+        </div>
+    </div>
+    <div class="blur_back tomb_back"></div>
+</div>
+
+<div class="movie_card_left">
+    <div class="info_section_left">
+        <div class="movie_header_left">
+            <h1>Удобный кабель-менеджмент</h1>
+        </div>
+        <div class="movie_desc_left">
+            <p class="text">
+                Столы с желобами для кабель-менеджмента обеспечивают удобство в рабочем пространстве, продлевая срок
+                службы кабелей и способствуя упорядоченности и чистоте. Желоба позволяют легко соединять провода,
+                уменьшая их длину, и обеспечивают удобный способ прокладки кабелей на задней стенке стола или стене,
+                уменьшая излишнее натяжение и перегибы.
+            </p>
+        </div>
+    </div>
+    <div class="blur_back_left tomb_back"></div>
+</div>
+
+<div class="container page-wrapper">
+    <div class="page-inner">
+        <div class="row">
+            {% for i in items %}
+            <div class="el-wrapper">
+                <div class="box-up">
+                    <img class="img" src="https://mebel-restoran.ru/images/virtuemart/product/resized/%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%20%D0%BB%D0%BE%D1%84%D1%824_800x800.jpg" alt="">
+                    <div class="img-info">
+                        <div class="info-inner">
+                            <span class="p-name">I feel like Pablo</span>
+                            <span class="p-company">Yeezy</span>
+                        </div>
+                        <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                    </div>
+                </div>
+
+                <div class="box-down">
+                    <div class="h-bg">
+                        <div class="h-bg-inner"></div>
+                    </div>
+
+                    <a class="cart" href="#">
+                        <span class="price">$120</span>
+                        <span class="add-to-cart">
+                            <span class="txt">Add in cart</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
+
