@@ -3,4 +3,4 @@ from .models import *
 
 def index(request):
     tables = TableFurniture.objects.all()
-    return render(request, 'index.html', {"items": range(7)})
+    return render(request, 'index.html', {"items": tables})
